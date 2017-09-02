@@ -2,7 +2,7 @@ AC_INIT([libbyteconvert], [0.1.0], [slocomptech@gmail.com])
 
 AC_CONFIG_MACRO_DIR([m4])
 
-AM_INIT_AUTOMAKE([-Wall -Werror foreign])
+AM_INIT_AUTOMAKE([-Wall foreign])
 LT_INIT
 
 # Checks for programs.
@@ -22,6 +22,7 @@ AC_FUNC_MALLOC
 
 # Config files
 AC_CONFIG_FILES([Makefile
-                libbyteconvert/Makefile])
+                libbyteconvert/Makefile
+                libbyteconvert.pc])
 
 AC_OUTPUT
