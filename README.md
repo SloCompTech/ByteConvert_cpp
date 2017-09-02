@@ -8,6 +8,17 @@ Have you ever wanted to transmit `int`,`short`,`long`,`double` or any other nume
 ## What you need to consider, when you are using this library
 When you are using this library, you need to consider variable byte size, because if you are using different platforms, then there may be some errors, because int on platform 1 has 4 bytes and int on platform 2 may has 2 bytes.
 
+## How to install
+```
+$ cd <library_directory>
+$ autoreconf -vis
+$ ./configure
+$ make
+$ make install
+```
+
+If you have problems, that library can't be found run `sudo ldconfig`.
+
 ## Examples
 Convert numeric variable for eg. `int`,`short`,`float`,`double` to array of bytes.
 ``` c++
