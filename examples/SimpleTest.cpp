@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include "../libbyteconvert/ByteConvert.hpp"
+#include <ByteConvert.hpp>
 
 using namespace std;
 
