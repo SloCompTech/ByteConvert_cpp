@@ -1,8 +1,8 @@
 pkg = import('pkgconfig')
-mylib = shared_library('byteconvert', 'ByteConvert.cpp', version : '0.1.1', soversion : '0',install: true)
+mylib = shared_library('byteconvert', 'ByteConvert.cpp', version : '0.1.2', soversion : '0',install: true)
 install_headers('ByteConvert.hpp', subdir : 'ByteConvert')
 pkg.generate(libraries : mylib,
-             version : '0.1.1',
+             version : '0.1.2',
              name : 'libbyteconvert',
              filebase : 'libbyteconvert',
              description : 'A conversion library.')
