@@ -11,13 +11,8 @@ When you are using this library, you need to consider variable byte size, becaus
 ## How to install
 ```
 $ cd <library_directory>
-$ autoreconf -vis
-$ ./configure
-$ make
-$ make install
 ```
 
-If you have problems, that library can't be found run `sudo ldconfig`.
 
 ## Examples
 Convert numeric variable for eg. `int`,`short`,`float`,`double` to array of bytes.
