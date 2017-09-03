@@ -6,4 +6,4 @@ pkg.generate(libraries : mylib,
              name : 'libbyteconvert',
              filebase : 'libbyteconvert',
              description : 'A conversion library.',
-             variables : 'URL=https://github.com/SloCompTech/ByteConvert_cpp')
+             url: 'https://github.com/SloCompTech/ByteConvert_cpp')
