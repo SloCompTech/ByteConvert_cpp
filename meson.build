@@ -13,3 +13,5 @@ pkg.generate(libraries : mylib,
              filebase : 'byteconvert',
              description : 'A conversion library.',
              url: 'https://github.com/SloCompTech/ByteConvert_cpp')
+
+subdir('examples')
