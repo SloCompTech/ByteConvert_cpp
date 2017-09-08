@@ -1,9 +1,5 @@
-pkg = import('pkgconfig')
-mylib = shared_library('byteconvert', 'ByteConvert.cpp', version : '0.1.3', soversion : '0',install: true)
+mylib = shared_library('byteconvert', 'ByteConvert.cpp', 
+                        version : meson.project_version(),
+                         soversion : '0',
+                         install: true)
 install_headers('ByteConvert.hpp', subdir : 'ByteConvert')
-pkg.generate(libraries : mylib,
-             version : '0.1.3',
-             name : 'libbyteconvert',
-             filebase : 'libbyteconvert',
-             description : 'A conversion library.',
-             url: 'https://github.com/SloCompTech/ByteConvert_cpp')
