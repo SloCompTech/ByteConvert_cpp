@@ -1,5 +1,13 @@
-mylib = shared_library('byteconvert', 'ByteConvert.cpp', 
-                        version : meson.project_version(),
-                         soversion : '0',
-                         install: true)
+# Install headers
 install_headers('ByteConvert.hpp', subdir : 'ByteConvert')
+
+# List sources
+src = ['ByteConvert.cpp']
+
+# Link & build libraries
+libbyteconvert = library(
+    meson.project_name(), 
+    src, 
+    version : meson.project_version(),
+    install: true
+)
