@@ -1,0 +1,26 @@
+language: generic
+sudo: enabled
+services:
+- docker
+stages:
+- test
+jobs:
+  include:
+    stage: test
+    install:
+      - sudo docker pull slocomptech/docker-meson-cpp:latest
+      - sudo docker run -it -d --name buildenv slocomptech/docker-meson-cpp bash
+      - sudo docker ps
+      - sudo docker exec buildenv apt-get install git -y
+    before_script:
+      - sudo docker exec buildenv git clone -b ${TRAVIS_BRANCH} https://github.com/SloCompTech/ByteConvert_cpp.git ByteConvert_cpp
+    script:
+      - sudo docker exec buildenv bash -c 'cd ByteConvert_cpp && meson build'
+      - sudo docker exec buildenv bash -c 'cd ByteConvert_cpp && ninja -C build'
+      - sudo docker exec buildenv bash -c 'cd ByteConvert_cpp && ninja -C build test'
+      - sudo docker exec buildenv bash -c 'cd ByteConvert_cpp && ninja -C build install'
+    after_script:
+      - sudo docker stop buildenv
+      - sudo docker rm buildenv
+      - sudo docker rmi slocomptech/docker-meson-cpp:latest
+      - sudo docker ps -a

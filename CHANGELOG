@@ -1,0 +1,11 @@
+# 2.0.0
+- Rewritten whole library
+- Improved preformace
+- Changed function names
+- Improved meson framework
+- Fixed issues in Readme.md
+- Added make file
+- Added CI for auto testing
+- Added tests
+- Added examples
+- Fixed issues in `Readme.md`
